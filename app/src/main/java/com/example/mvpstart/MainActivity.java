@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements MVPView {
     final TextView textView = findViewById(R.id.result);
     final Button button = findViewById(R.id.button);
 
-    private Presenter presenter = new Presenter(this);
+    private MainPresenter presenter = new MainPresenter(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

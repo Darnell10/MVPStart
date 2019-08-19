@@ -1,11 +1,12 @@
 package com.example.mvpstart;
 
-public class Presenter {
+public class MainPresenter implements MainContract.MvpPresenter {
 
-    private final MVPView view;
+
     private final Calculator calculator = new Calculator();
+    private final MainContract.MvpView view;
 
-    public Presenter(MVPView view){
+    public MainPresenter(MainContract.MvpView view){
         this.view = view;
     }
 

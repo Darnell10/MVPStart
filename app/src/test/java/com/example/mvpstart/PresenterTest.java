@@ -6,7 +6,7 @@ public class PresenterTest {
 
     private MVPView view;
 
-    private Presenter testObject;
+    private MainPresenter testObject;
 
     @Before
     public void setup(){
