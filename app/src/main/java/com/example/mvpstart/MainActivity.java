@@ -8,14 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements MVPView {
+public class MainActivity extends AppCompatActivity implements MainContract.MvpView {
 
-    private Calculator calculator = new Calculator();
     final EditText editText = findViewById(R.id.input);
     final TextView textView = findViewById(R.id.result);
     final Button button = findViewById(R.id.button);
 
-    private MainPresenter presenter = new MainPresenter(this);
+    private MainPresenter presenter = new MainPresenter((MainContract.MvpView) this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
