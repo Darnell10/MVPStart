@@ -37,7 +37,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void GivenInputNeggativeNumber(){
+    public void GivenInputNegativeNumber() {
         //given
         String input = "-1";
         int expected = 0;
@@ -47,6 +47,19 @@ public class CalculatorTest {
 
         //then
 
-        Assert.assertEquals(result,expected);
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void GivenInputIsString_WhenFeatureOneIsCalled_Return0AsResult() {
+        //Given
+        String input = "Hello World";
+        int expected = 0;
+
+        //when
+        int result = testSubject.featureOne(input);
+
+        //Then
+        Assert.assertEquals(result, expected);
     }
 }

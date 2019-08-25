@@ -4,7 +4,7 @@ import org.junit.Before;
 
 public class PresenterTest {
 
-    private MVPView view;
+    private MainContract view;
 
     private MainPresenter testObject;
 
